@@ -2,7 +2,8 @@
   "name": "react-ml-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/react-ml-app",
+  "proxy": "http://127.0.0.1:8080/",
+  "homepage": "/backend/static/build",
   "dependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
@@ -18,6 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "rm -rf ../backend/templates/index.html && rm -rf ../backend/static/build",
+    "postbuild": "mv build/index.html ../backend/templates/ &&  mv build ../backend/static/",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,3 +1,9 @@
+/*
+ * @Date: 2022-03-25 19:03:59
+ * @LastEditors: Azus
+ * @LastEditTime: 2022-03-26 15:42:04
+ * @FilePath: /react-ml-app/frontend/src/components/Classifier.js
+ */
 import React, {useRef, useEffect, useState} from 'react';
 import Predictions from './Predictions';
 import Grid from '@material-ui/core/Grid';
@@ -45,14 +51,16 @@ export default function Classifier() {
     const classes = useStyles();
     return <div className={classes.root}>
         <Grid container spacing={3}>
+            
             <Grid item>
                 <DropImageCard setFile={setFile} canvasRef={canvas} fileLoaded={!!file} />
-                { !loaded && !isLoading && <Button variant="contained" onClick={startLoadModel}>Load model (48 MB)</Button>}
+                { !loaded && !isLoading && <Button variant="contained" onClick={startLoadModel}>Load Classifier</Button>}
                 { !loaded && isLoading && <LoadingSnackbar message="Loading model..." /> }
                 { loaded && data && !outputMap && <LoadingSnackbar message="Running model..." /> }
                 { loaded && !file && <InfoSnackbar message="Add or take a picture..." /> }
                 { !!file && !data && <LoadingSnackbar message="Loading image..." /> }
             </Grid>
+            
             <Grid item>
                 <Predictions output={outputData} />
             </Grid>
