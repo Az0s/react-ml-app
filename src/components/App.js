@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-03-25 19:03:59
  * @LastEditors: Azus
- * @LastEditTime: 2022-03-26 21:49:04
+ * @LastEditTime: 2022-03-27 11:38:54
  * @FilePath: /react-ml-app/frontend/src/components/App.js
  */
 import React from 'react';
@@ -75,7 +75,6 @@ function App() {
           <footer className={classes.footer}>
             <Button
               className={classes.button}
-
             >
               Privacy Policy
             </Button>
@@ -87,7 +86,6 @@ function App() {
             </Button>
             <Button
               className={classes.button}
-
             >
               CONTACT
             </Button>
