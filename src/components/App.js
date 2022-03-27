@@ -1,11 +1,11 @@
 /*
  * @Date: 2022-03-25 19:03:59
  * @LastEditors: Azus
- * @LastEditTime: 2022-03-26 16:21:39
+ * @LastEditTime: 2022-03-26 21:49:04
  * @FilePath: /react-ml-app/frontend/src/components/App.js
  */
 import React from 'react';
-// import Classifier from './Classifier'
+import Classifier from './Classifier'
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
@@ -61,9 +61,9 @@ function App() {
         
         <Container className={classes.content}>
 
-          {/* <Classifier /> */}
+          <Classifier />
 
-          <SendImage />
+          {/* <SendImage /> */}
         </Container>
         <Container className={classes.content}>
 
